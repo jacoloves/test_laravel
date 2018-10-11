@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('board', 'BoardController@index');
+
 Route::get('/', function () {
     return view('welcome');
 });
