@@ -14,7 +14,7 @@
 Route::get('board', 'BoardController@index');
 
 Route::get('board/add', 'BoardController@add');
-Route::post('board/add', 'BoardContoller@create'); 
+Route::post('board/add', 'BoardController@create'); 
 
 /*
 Route::get('/', function () {
