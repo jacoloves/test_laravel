@@ -17,6 +17,8 @@ Route::get('board/add', 'BoardController@add');
 Route::post('board/add', 'BoardController@create'); 
 
 Route::get('person', 'PersonController@index');
+Route::get('person/find', 'PersonController@find');
+Route::post('person/find', 'PersonController@search');
 /*
 Route::get('/', function () {
     return view('welcome');
