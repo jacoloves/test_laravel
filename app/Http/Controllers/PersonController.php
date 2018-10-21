@@ -15,7 +15,7 @@ class PersonController extends Controller
 
     public function find(Request $request)
     {
-        return view('person.find', ['input' => '']);
+        return view('Person.find', ['input' => '']);
     }
 
     public function search(Request $request)
@@ -24,12 +24,12 @@ class PersonController extends Controller
         $max = $min + 10;
         $item = Person::ageGreaterThan($min)->ageLessThan($max)->first();
         $param = ['input' => $request->input, 'item' => $item];
-        return view('person.find', $param);
+        return view('Person.find', $param);
     }
 
     public function add(Request $request)
     {
-        return view('person.add');
+        return view('Person.add');
     }
 
     public function create(Request $request)
@@ -39,13 +39,13 @@ class PersonController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $person->fill($form)->save();
-        return redirect('/person');
+        return redirect('/Person');
     }
 
     public function edit(Request $request)
     {
         $person = Person::find($request->id);
-        return view('person.edit', ['form' => $person]);
+        return view('Person.edit', ['form' => $person]);
     }
 
     public function update(Request $request)
@@ -55,18 +55,18 @@ class PersonController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $person->fill($form)->save();
-        return redirect('/person');
+        return redirect('/Person');
     }
 
     public function delete(Request $request)
     {
         $person = Person::find($request->id);
-        return view('person.del', ['form' => $person]);
+        return view('Person.del', ['form' => $person]);
     }
 
     public function remove(Request $request)
     {
         Person::find($request->id)->delete();
-        return redirect('/person');
+        return redirect('/Person');
     }
 }
