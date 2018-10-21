@@ -39,7 +39,7 @@ class PersonController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $person->fill($form)->save();
-        return redirect('/Person');
+        return redirect('/person');
     }
 
     public function edit(Request $request)
@@ -55,7 +55,7 @@ class PersonController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $person->fill($form)->save();
-        return redirect('/Person');
+        return redirect('/person');
     }
 
     public function delete(Request $request)
@@ -67,6 +67,6 @@ class PersonController extends Controller
     public function remove(Request $request)
     {
         Person::find($request->id)->delete();
-        return redirect('/Person');
+        return redirect('/person');
     }
 }
