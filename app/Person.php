@@ -45,8 +45,15 @@ class Person extends Model
         'age' => 'integer|min:0|max:150'
     );
 
-    public function board()
+    
+    public function boards()
     {
         return $this->hasMany('App\Board');
     }
+
+    public function getNameAttribute($value)
+    {
+        return $value;
+    }
+    
 }
