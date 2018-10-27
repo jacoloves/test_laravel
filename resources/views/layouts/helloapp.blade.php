@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="stylesheet" href="text/scss" href="/resoures/sass/app.scss">
         <title>@yield('title')</title>
         <style>
             body {
