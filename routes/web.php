@@ -29,6 +29,9 @@ Route::post('person/del', 'PersonController@remove');
 Route::resource('rest', 'RestappController'); 
 
 Route::get('hello/rest', 'HelloController@rest');
+Route::get('hello/session', 'HelloController@ses_get');
+Route::post('hello/session', 'HelloController@ses_put');
+Route::get('hello', 'HelloController@index');
 
 /*
 Route::get('/', function () {
