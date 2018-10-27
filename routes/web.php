@@ -28,6 +28,8 @@ Route::post('person/del', 'PersonController@remove');
 
 Route::resource('rest', 'RestappController'); 
 
+Route::get('hello/rest', 'HelloController@rest');
+
 /*
 Route::get('/', function () {
     return view('welcome');
