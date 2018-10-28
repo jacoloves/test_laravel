@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="text/scss" href="/resoures/sass/app.scss">
+        <link rel="stylesheet" href="text/css" href="/test_laravel/public/css/app.css">
         <title>@yield('title')</title>
         <style>
             body {
